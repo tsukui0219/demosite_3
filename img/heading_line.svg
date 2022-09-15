@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18">
+  <g id="line" style="isolation: isolate">
+    <path id="line1" d="M.457,9.294l-.914-.407L3.588-.2,4.5.2Z" transform="translate(0.457 0.203)" fill="#4392e8"/>
+    <path id="line2" d="M.278,6.426l-.555-.832,9-6.011.555.832Z" transform="translate(4.995 6.355)" fill="#4392e8"/>
+    <path id="line3" d="M0,.511v-1L10-.5v1Z" transform="translate(5.995 17.489)" fill="#4392e8"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+@use "variable" as var;
+
+@mixin section_padding($pt:70px,$pb:70px,$sm_pt:50px,$sm_pb:50px){
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin mq($breakpoint){
+    @media screen and (max-width:$breakpoint){
+        @content;        
+    }
+}

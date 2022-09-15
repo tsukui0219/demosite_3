@@ -1,0 +1,857 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  color: #333;
+  line-height: 1.8;
+  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "メイリオ", "Meirio", sans-serif;
+}
+body * {
+  box-sizing: border-box;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* ------------------------------------
+    基本幅
+------------------------------------- */
+.blContainer {
+  width: 92%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ------------------------------------
+    見出し
+------------------------------------- */
+.heading {
+  padding-bottom: 0.25em;
+}
+.heading__subText {
+  font-size: 0.875rem;
+  color: #1593ef;
+}
+.heading__mainText {
+  display: inline-block;
+  border-bottom: 1px dashed #1593ef;
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.4;
+  position: relative;
+}
+.heading__mainText::after {
+  content: "";
+  width: 16px;
+  height: 18px;
+  position: absolute;
+  top: -10px;
+  right: -14px;
+  background: url(../img/heading_line.svg);
+}
+
+.heading_center {
+  text-align: center;
+}
+
+/* ------------------------------------
+    角丸トリミング
+------------------------------------- */
+.trimRounded {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ------------------------------------
+    ラベル
+------------------------------------- */
+.label {
+  display: inline-block;
+  padding: 0.2em 0.5em 0.1em;
+  color: #fff;
+  background: #ebb708;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.label_theme_seminar {
+  background: #1593ef;
+}
+
+/* ------------------------------------
+    ボタン
+------------------------------------- */
+.button {
+  display: inline-block;
+  padding: 0.7em 2.5em 0.6em 2em;
+  border: 1px solid #a5a5a5;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  line-height: 1.4;
+  transition: all ease 0.15s;
+}
+.button::after {
+  content: "\f105";
+  font: var(--fa-font-solid);
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  transition: all ease 0.15s;
+}
+
+.button:hover {
+  background: #1593ef;
+  border-color: #1593ef;
+  color: #fff;
+}
+.button:hover::after {
+  right: 0.25em;
+  color: #fff;
+}
+
+/* ------------------------------------
+    カード
+------------------------------------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+}
+
+.cards_col3 .cards__item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.cards_col3 .cards__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card {
+  list-style: none;
+}
+.card__link {
+  display: block;
+}
+.card__link:hover .card__title {
+  text-decoration: underline;
+}
+.card__link > *:last-child {
+  margin-bottom: 0;
+}
+.card__imgWrapper {
+  margin-bottom: 10px;
+}
+.card__img {
+  width: 100%;
+  transition: all ease 0.3s;
+}
+.card__date {
+  font-size: 0.75rem;
+  color: #555;
+}
+.card__title {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+.card__description {
+  color: #555;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.card__link:hover .card__img {
+  transform: scale(1.2);
+}
+
+/* ------------------------------------
+    ヘッダー
+------------------------------------- */
+.header {
+  display: flex;
+}
+.header__title {
+  margin-top: 15px;
+  margin-right: auto;
+}
+
+.siteTitle__tagLine {
+  font-size: 0.6875rem;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 1200px) {
+  .siteTitle__logo {
+    display: inline-block;
+    width: 110px;
+  }
+}
+
+.pcMenu__sub {
+  margin-bottom: 15px;
+}
+
+.subMenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.subMenu__recruitLink {
+  font-size: 0.875rem;
+  margin-right: 25px;
+}
+.subMenu__recruitLink:hover {
+  text-decoration: underline;
+}
+.subMenu__shop {
+  display: flex;
+}
+.subMenu__shopLink {
+  width: 115px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 15px 0;
+  border: 1px solid #1593ef;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background: #1593ef;
+  color: #fff;
+  transition: all ease 0.15s;
+}
+.subMenu__shopLink:hover {
+  background: #fff;
+  color: #1593ef;
+}
+
+.mainMenu {
+  margin-bottom: 15px;
+}
+.mainMenu__list {
+  display: flex;
+}
+.mainMenu__item {
+  width: 115px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 0.9375rem;
+  padding-top: 2px;
+  border-bottom: 2px solid #c2d6e5;
+}
+.mainMenu__link {
+  display: block;
+}
+.mainMenu__label {
+  color: #1593ef;
+  font-size: 0.625rem;
+}
+
+/* ------------------------------------
+    キービジュアル
+------------------------------------- */
+.keyVisual {
+  background: #EAF6FF;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.keyVisual__inner {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .keyVisual__inner {
+    display: block;
+  }
+}
+.keyVisual__textArea {
+  flex: 1 1 60%;
+  margin-right: auto;
+}
+.keyVisual__catch {
+  font-size: 3.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .keyVisual__catch {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .keyVisual__catch {
+    font-size: 2.25rem;
+  }
+}
+.keyVisual__catch span {
+  color: #1593ef;
+}
+.keyVisual__lead {
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+}
+.keyVisual__subCatch span {
+  font-size: 1.75rem;
+  padding: 0.3em 0.5em;
+  line-height: 2;
+  color: #fff;
+  background: #ebb708;
+}
+@media screen and (max-width: 767px) {
+  .keyVisual__subCatch span {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .keyVisual__subCatch {
+    margin-bottom: 30px !important;
+  }
+}
+.keyVisual__imgArea {
+  flex: 1 1 40%;
+  margin-left: 40px;
+  margin-right: 35px;
+}
+@media screen and (max-width: 767px) {
+  .keyVisual__imgArea {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.keyVisual__bottomWave {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: -50px;
+}
+.keyVisual__bottomWaveImg {
+  width: 100%;
+  height: 50px;
+}
+
+/* ------------------------------------
+    採用ステッキーバナー
+------------------------------------- */
+.recruitBanner {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 9998;
+  transform: translateY(-50%);
+  writing-mode: vertical-lr;
+  letter-spacing: 0.3em;
+  padding: 40px 7px;
+  background: #ebb708;
+  font-size: 1.3125rem;
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+}
+
+/* ------------------------------------
+    メッセージ
+------------------------------------- */
+.messageBlock {
+  display: flex;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.messageBlock__imgArea {
+  flex: 1 1 520px;
+  margin-right: 40px;
+}
+.messageBlock__textArea {
+  flex: 1 1.5 600px;
+  margin-top: 20px;
+  padding: 0 30px 30px;
+  background: url("../img/message_text_bg.jpg");
+  text-align: left;
+}
+.messageBlock__heading {
+  margin-top: -40px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* ------------------------------------
+    サービス（私たちができること）
+------------------------------------- */
+.serviceBlock {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #EAF6FF;
+}
+.serviceBlock__inner > *:last-child {
+  margin-bottom: 0;
+}
+.serviceBlock__heading {
+  margin-bottom: 50px;
+}
+.serviceBlock__content {
+  margin-bottom: 60px;
+}
+
+.serviceContent {
+  display: flex;
+  align-items: center;
+}
+.serviceContent__textArea {
+  flex: 1 1 50%;
+  margin-right: 40px;
+}
+.serviceContent__imgArea {
+  flex: 1 1 calc(50% - 40px);
+}
+.serviceContent__heading {
+  font-size: 1.625rem;
+  color: #1593ef;
+  border-bottom: 1px solid #1593ef;
+  margin-bottom: 25px;
+}
+.serviceContent__text:last-of-type {
+  margin-bottom: 0.5em;
+}
+.serviceContent__labels {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+.serviceContent__label {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.serviceContent__reverse {
+  flex-direction: row-reverse;
+}
+.serviceContent__reverse .serviceContent__textArea {
+  margin-right: 0;
+  margin-left: 40px;
+}
+
+/* ------------------------------------
+    コラム
+------------------------------------- */
+.columnBlock {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.columnBlock__heading {
+  margin-bottom: 35px;
+}
+
+/* ------------------------------------
+    店舗情報
+------------------------------------- */
+.shopBlock {
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+.shopBlock__heading {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.shopBlock__headingInner {
+  font-size: 1.5rem;
+  display: inline-block;
+  background: #1593ef;
+  border-radius: 35px;
+  padding: 8px 60px 6px;
+  border: 2px solid #fff;
+  color: #fff;
+  line-height: 1.3;
+}
+.shopBlock__headingLabel {
+  font-size: 0.875rem;
+}
+.shopBlock__shopWrapper {
+  display: flex;
+  margin-top: -35px;
+}
+.shopBlock__shopItem {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopInfo {
+  border-radius: 0 0 0 60px;
+  overflow: hidden;
+}
+.shopInfo__img {
+  width: 100%;
+}
+.shopInfo__textArea {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #EAF6FF;
+  padding: 30px 30px 35px;
+}
+.shopInfo__title {
+  font-weight: bold;
+  font-size: 1.375rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.shopInfo__table {
+  margin-bottom: auto;
+}
+.shopInfo__tableHaeder {
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 20px;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.shopInfo__tableData {
+  font-size: 0.9375rem;
+}
+.shopInfo__map {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.shopInfo__map::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.shopInfo__mapInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.shopInfo__linkWrapper {
+  text-align: center;
+}
+
+.shopInfo_v2 {
+  border-radius: 0 0 60px 0;
+}
+.shopInfo_v2 .shopInfo__textArea {
+  background: #fcf3d7;
+}
+
+/* ------------------------------------
+    お知らせ
+------------------------------------- */
+.newsBlock__heading {
+  margin-bottom: 30px;
+}
+.newsBlock__list {
+  margin-bottom: 35px;
+}
+.newsBlock__link {
+  text-align: center;
+}
+
+.newsList {
+  list-style: none;
+}
+.newsList__link {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.8em 2px 0.3em;
+  border-bottom: 1px dotted #a5a5a5;
+}
+.newsList__link:hover .newsList__title {
+  text-decoration: underline;
+}
+.newsList__date {
+  margin-right: 25px;
+}
+.newsList__label {
+  margin-right: 10px;
+  font-size: 0.8125rem;
+}
+/* ------------------------------------
+    フッター
+------------------------------------- */
+.footer {
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background: #EAF6FF;
+}
+.footer__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer__shopList {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+.footer__shop {
+  width: 300px;
+  line-height: 1.4;
+  text-align: center;
+  padding-right: 15px;
+  border-right: 1px solid #c2d6e5;
+}
+.footer__shop:last-child {
+  padding-right: 0;
+  padding-left: 15px;
+  border: none;
+}
+.footer__shopName {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.footer__shopName:hover {
+  text-decoration: underline;
+}
+.footer__shopAddress {
+  font-size: 0.875em;
+}
+.footer__shopTel {
+  font-size: 0.875em;
+}
+.footer__nav {
+  margin-bottom: 5px;
+}
+.footer__navList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.8125rem;
+}
+.footer__navItem {
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+}
+.footer__navItem::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #c2d6e5;
+}
+.footer__navItem:first-child:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #c2d6e5;
+}
+.footer__navLink {
+  display: block;
+  color: #555;
+}
+.footer__navLink:hover {
+  text-decoration: underline;
+}
+.footer__copyright {
+  text-align: center;
+  color: #777;
+  font-size: 0.6875rem;
+}
+/*# sourceMappingURL=style.css.map */
